@@ -148,13 +148,6 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, ini
             </button>
           </form>
         )}
-
-        {/* Quick Contact Footer */}
-        <div className="pt-4 border-t border-zinc-800 flex flex-wrap justify-between items-center text-xs text-zinc-400 font-mono">
-          <span>📧 {PERSONAL_INFO.email}</span>
-          <span>📱 {PERSONAL_INFO.phone}</span>
-        </div>
-
       </div>
     </div>
   );
