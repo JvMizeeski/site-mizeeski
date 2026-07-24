@@ -401,7 +401,7 @@ export const ACADEMIC_DEGREES: AcademicDegree[] = [
     degree: 'Pós-Graduação Lato Sensu',
     field: 'Engenharia de Software',
     period: '2025 - 2026',
-    status: 'in_progress',
+    status: 'concluded',
     highlights: 'Aprofundamento na arquitetura de sistemas, padronização de código, viabilidade técnica de interfaces e integração front-end.'
   },
   {
