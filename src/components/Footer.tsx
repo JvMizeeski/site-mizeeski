@@ -67,7 +67,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
               <li><a href="#problem" className="hover:text-cyan-400 transition-colors">O Desafio</a></li>
               <li><a href="#behavioral" className="hover:text-cyan-400 transition-colors">Meu Método</a></li>
               <li><a href="#services" className="hover:text-cyan-400 transition-colors">Serviços</a></li>
-              <li><a href="#portfolio" className="hover:text-cyan-400 transition-colors">Portfólio & Cases</a></li>
               <li><a href="#experience" className="hover:text-cyan-400 transition-colors">Trajetória</a></li>
               <li><a href="#faq" className="hover:text-cyan-400 transition-colors">FAQ</a></li>
             </ul>
