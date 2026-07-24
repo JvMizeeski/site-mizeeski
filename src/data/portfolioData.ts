@@ -3,13 +3,13 @@ import { ProjectCase, ServicePackage, WorkExperience, AcademicDegree, Certificat
 export const PERSONAL_INFO = {
   name: 'João Vitor Mizeeski',
   headline: 'Especialista UX/UI • Engenharia Comportamental',
-  location: 'Palhoça / Florianópolis, Santa Catarina, Brasil',
+  location: 'São José / Florianópolis, Santa Catarina, Brasil',
   email: 'joaovitor.mizeeski@gmail.com',
   phone: '+55 (48) 98459-1763',
   phoneRaw: '5548984591763',
   whatsappUrl: 'https://wa.me/5548984591763',
   linkedin: 'https://www.linkedin.com/in/joao-mizeeski',
-  behance: 'https://www.behance.net/joovimizuessk',
+  behance: 'https://www.behance.net/joovimizeesk',
   currentSite: 'https://mizeeski.com/',
   bioSummary: `Sou UX/UI Designer especializado em Behavioral Design: uso neurociência comportamental para desenhar produtos digitais que reduzem erro, aumentam confiança e convertem mais. Atuo do discovery à entrega em código, ponte entre design e engenharia.`,
   corePillars: [
