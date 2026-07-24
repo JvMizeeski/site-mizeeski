@@ -82,7 +82,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
               className="relative flex items-center justify-center w-full"
             >
               <img
-                src="/assets/img/hero.png"
+                src={`${import.meta.env.BASE_URL}assets/img/hero.png`}
                 alt="Neurociência e Design de Interface"
                 referrerPolicy="no-referrer"
                 className="w-full h-auto object-contain max-h-[480px] drop-shadow-[0_10px_35px_rgba(2,132,199,0.15)] transition-transform duration-500 hover:scale-[1.02]"
