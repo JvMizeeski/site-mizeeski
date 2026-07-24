@@ -49,10 +49,6 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, ini
 
         {/* Header */}
         <div className="space-y-2 pr-10">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-950 border border-blue-800 text-blue-300 font-mono text-xs">
-            <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
-            <span>Atendimento Direto com João Vitor</span>
-          </div>
           <h3 className="text-2xl font-bold text-white">Vamos Iniciar o seu Projeto</h3>
           <p className="text-xs text-zinc-400">
             Preencha os dados abaixo para agendarmos uma conversa de alinhamento ou envie uma mensagem direta pelo WhatsApp.
@@ -125,24 +121,31 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, ini
               />
             </div>
 
-            <div className="pt-2 flex flex-col sm:flex-row gap-3">
-              <button
-                type="submit"
-                className="flex-1 py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-base font-mono flex items-center justify-center gap-2 shadow-lg shadow-blue-600/20"
-              >
-                <Mail className="w-4 h-4" />
-                Enviar Mensagem por E-mail
-              </button>
+            {/* Primary Action: Email Submit */}
+            <button
+              type="submit"
+              className="w-full py-3.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-base font-mono flex items-center justify-center gap-2 shadow-lg shadow-blue-600/20 transition-all duration-200 active:scale-[0.98]"
+            >
+              <Mail className="w-4 h-4" />
+              Enviar Mensagem por E-mail
+            </button>
 
-              <button
-                type="button"
-                onClick={handleWhatsApp}
-                className="py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base font-mono flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/20"
-              >
-                <MessageSquare className="w-4 h-4" />
-                Conversar no WhatsApp
-              </button>
+            {/* Divider */}
+            <div className="flex items-center gap-3 pt-1">
+              <div className="flex-1 h-px bg-zinc-800" />
+              <span className="text-[11px] text-zinc-500 font-mono uppercase tracking-wide">ou prefere agora?</span>
+              <div className="flex-1 h-px bg-zinc-800" />
             </div>
+
+            {/* Secondary Action: WhatsApp */}
+            <button
+              type="button"
+              onClick={handleWhatsApp}
+              className="w-full py-3 px-4 rounded-xl bg-transparent hover:bg-emerald-950/40 border border-emerald-700/60 text-emerald-400 font-semibold text-sm font-mono flex items-center justify-center gap-2 transition-all duration-200 active:scale-[0.98]"
+            >
+              <MessageSquare className="w-4 h-4" />
+              Conversar no WhatsApp
+            </button>
           </form>
         )}
 
