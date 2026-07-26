@@ -62,7 +62,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
 
                 {/* Secondary Button: Ver Portfólio */}
                 <a
-                  href="#portfolio"
+                  href="https://www.behance.net/joovimizeesk"
                   className="px-6 py-3.5 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 border border-zinc-700/80 text-zinc-200 font-mono font-semibold text-base flex items-center justify-center gap-2 transition-all duration-200 active:scale-95 shadow-lg w-full sm:w-auto"
                 >
                   <MessageSquare className="w-4 h-4 text-cyan-400" />
