@@ -12,7 +12,6 @@ export const BehavioralApproach: React.FC<BehavioralApproachProps> = ({ onOpenCo
       kicker: '01 · Cognição',
       title: 'Menos Carga Mental',
       phrase: 'Telas desenhadas dentro dos limites da memória de trabalho: menos hesitação, menos erro, mesmo em sistemas densos.',
-      tags: ['Figma Variables', 'Usability Tests'],
       icon: Zap,
       color: 'text-cyan-400',
       bgColor: 'bg-cyan-950/20',
@@ -23,7 +22,6 @@ export const BehavioralApproach: React.FC<BehavioralApproachProps> = ({ onOpenCo
       kicker: '02 · Comportamento',
       title: 'Decisões Mais Fáceis',
       phrase: 'Heurísticas éticas que guiam a escolha do usuário, sem gerar paralisia e sem dark patterns.',
-      tags: ['A/B Testing', 'Micro-Interações'],
       icon: Orbit,
       color: 'text-purple-400',
       bgColor: 'bg-purple-950/20',
@@ -34,7 +32,6 @@ export const BehavioralApproach: React.FC<BehavioralApproachProps> = ({ onOpenCo
       kicker: '03 · Arquitetura',
       title: 'Arquitetura de Projeto',
       phrase: 'Organização de componentes, auto-layout rigoroso e fluxos estruturados no Figma para um handoff limpo e sem dúvidas.',
-      tags: ['Figma', 'Auto Layout', 'Design System'],
       icon: Code2,
       color: 'text-emerald-400',
       bgColor: 'bg-emerald-950/20',
@@ -45,7 +42,6 @@ export const BehavioralApproach: React.FC<BehavioralApproachProps> = ({ onOpenCo
       kicker: '04 · Validação',
       title: 'Provado, Não Suposto',
       phrase: 'Testes de usabilidade e telemetria real transformam decisão de design em KPI de receita.',
-      tags: ['Hotjar', 'Clarity', 'HeatMap'],
       icon: ShieldCheck,
       color: 'text-pink-400',
       bgColor: 'bg-pink-950/20',
@@ -140,18 +136,6 @@ export const BehavioralApproach: React.FC<BehavioralApproachProps> = ({ onOpenCo
                     </p>
                   </div>
 
-                </div>
-
-                {/* Tags Footer */}
-                <div className="pt-4 mt-4 border-t border-zinc-800/80 flex flex-wrap gap-1.5">
-                  {card.tags.map((tag, tIdx) => (
-                    <span
-                      key={tIdx}
-                      className="text-[10px] font-mono px-2 py-0.5 rounded bg-zinc-950 text-zinc-400 border border-zinc-800"
-                    >
-                      {tag}
-                    </span>
-                  ))}
                 </div>
 
               </div>
