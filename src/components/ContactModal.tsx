@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-import { X, Send, Mail, Phone, MapPin, Linkedin, ExternalLink, CheckCircle2, MessageSquare, Sparkles } from 'lucide-react';
+import { X, Send, Mail, Phone, MapPin, Linkedin, ExternalLink, CheckCircle2, MessageSquare, Sparkles, Loader2, AlertCircle } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
+
+// 1. Cole aqui a Access Key que você recebe ao cadastrar seu e-mail em https://web3forms.com
+const WEB3FORMS_ACCESS_KEY = 'ab1c1c1c-c35f-40de-bb8b-542cbe81b232';
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -14,19 +17,47 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, ini
   const [subject, setSubject] = useState(initialSubject || 'Agendamento de Consultoria UX');
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      // open mailto
-      const mailto = `mailto:${PERSONAL_INFO.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-        `Nome: ${name}\nE-mail: ${email}\n\nMensagem:\n${message}`
-      )}`;
-      window.location.href = mailto;
-    }, 600);
+    setError(null);
+    setIsLoading(true);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          name,
+          email,
+          subject,
+          message,
+          // Alguns campos especiais que o Web3Forms reconhece automaticamente:
+          from_name: name,
+          replyto: email,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        setError('Não foi possível enviar. Tente novamente ou use o WhatsApp abaixo.');
+      }
+    } catch (err) {
+      setError('Erro de conexão. Tente novamente ou use o WhatsApp abaixo.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleWhatsApp = () => {
@@ -60,9 +91,9 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, ini
             <div className="w-16 h-16 bg-emerald-950 border border-emerald-800 rounded-full flex items-center justify-center mx-auto text-emerald-400">
               <CheckCircle2 className="w-8 h-8" />
             </div>
-            <h4 className="text-xl font-bold">Solicitação Encaminhada!</h4>
+            <h4 className="text-xl font-bold">Mensagem Enviada!</h4>
             <p className="text-xs text-zinc-400 max-w-md mx-auto">
-              Seu cliente de e-mail foi acionado com a mensagem formatada. Se preferir resposta imediata, utilize o botão do WhatsApp abaixo.
+              Recebi sua mensagem e vou te responder por e-mail em breve. Se preferir resposta imediata, utilize o botão do WhatsApp abaixo.
             </p>
             <button
               onClick={handleWhatsApp}
@@ -114,6 +145,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, ini
               <label className="text-xs font-mono text-zinc-300">Mensagem / Resumo do Projeto:</label>
               <textarea
                 rows={3}
+                required
                 placeholder="Conte brevemente sobre seu produto, metas ou dúvidas..."
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
@@ -121,13 +153,30 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, ini
               />
             </div>
 
-            {/* Primary Action: Email Submit */}
+            {error && (
+              <div className="flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-red-950/40 border border-red-800/60 text-red-400 text-xs">
+                <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                {error}
+              </div>
+            )}
+
+            {/* Primary Action: Send via Web3Forms */}
             <button
               type="submit"
-              className="w-full py-3.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-base font-mono flex items-center justify-center gap-2 shadow-lg shadow-blue-600/20 transition-all duration-200 active:scale-[0.98]"
+              disabled={isLoading}
+              className="w-full py-3.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 disabled:bg-blue-600/50 disabled:cursor-not-allowed text-white font-bold text-base font-mono flex items-center justify-center gap-2 shadow-lg shadow-blue-600/20 transition-all duration-200 active:scale-[0.98]"
             >
-              <Mail className="w-4 h-4" />
-              Enviar Mensagem por E-mail
+              {isLoading ? (
+                <>
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                  Enviando...
+                </>
+              ) : (
+                <>
+                  <Mail className="w-4 h-4" />
+                  Enviar Mensagem
+                </>
+              )}
             </button>
 
             {/* Divider */}
