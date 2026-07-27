@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { Brain, Layout, Code, CheckCircle2, ArrowRight, Sparkles, PackageCheck } from 'lucide-react';
+import React from 'react';
+import { motion } from 'motion/react';
+import { Brain, Layout, Code, CheckCircle2, ArrowRight, Sparkles } from 'lucide-react';
 import { SERVICES_DATA } from '../data/portfolioData';
 
 interface ServicesProps {
@@ -8,8 +8,6 @@ interface ServicesProps {
 }
 
 export const Services: React.FC<ServicesProps> = ({ onOpenContact }) => {
-  const [selectedServiceId, setSelectedServiceId] = useState<string>(SERVICES_DATA[0].id);
-
   const getServiceIcon = (iconName?: string) => {
     switch (iconName) {
       case 'Brain':
@@ -35,8 +33,6 @@ export const Services: React.FC<ServicesProps> = ({ onOpenContact }) => {
         return 'Solicitar Orçamento';
     }
   };
-
-  const activeService = SERVICES_DATA.find((s) => s.id === selectedServiceId) || SERVICES_DATA[0];
 
   return (
     <section id="services" className="py-16 md:py-36 bg-zinc-950 text-white relative border-t border-zinc-800/80">
@@ -71,17 +67,11 @@ export const Services: React.FC<ServicesProps> = ({ onOpenContact }) => {
         {/* 3 Service Pods Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {SERVICES_DATA.map((service, index) => {
-            const isSelected = selectedServiceId === service.id;
             return (
               <motion.div
                 key={service.id}
                 whileHover={{ y: -4 }}
-                onClick={() => setSelectedServiceId(service.id)}
-                className={`rounded-2xl border p-6 sm:p-8 cursor-pointer flex flex-col justify-between transition-all duration-300 backdrop-blur-md shadow-xl ${
-                  isSelected
-                    ? 'bg-zinc-900 border-cyan-500 shadow-cyan-950/40 ring-1 ring-cyan-500/50'
-                    : 'bg-zinc-900/60 border-zinc-800 hover:border-zinc-700'
-                }`}
+                className="rounded-2xl border p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 backdrop-blur-md shadow-xl bg-zinc-900/60 border-zinc-800 hover:border-zinc-700"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
@@ -121,11 +111,7 @@ export const Services: React.FC<ServicesProps> = ({ onOpenContact }) => {
                       e.stopPropagation();
                       onOpenContact(`Solicitação de Serviço: ${service.title}`);
                     }}
-                    className={`w-full py-3 px-4 rounded-xl font-mono text-base font-semibold flex items-center justify-center gap-2 transition-all active:scale-95 shadow-lg ${
-                      isSelected
-                        ? 'bg-blue-600 hover:bg-blue-500 text-white shadow-blue-600/20'
-                        : 'bg-zinc-800 hover:bg-zinc-700 text-zinc-200'
-                    }`}
+                    className="w-full py-3 px-4 rounded-xl font-mono text-base font-semibold flex items-center justify-center gap-2 transition-all active:scale-95 shadow-lg bg-blue-600 hover:bg-blue-500 text-white shadow-blue-600/20"
                   >
                     {getCtaText(service.id)}
                     <ArrowRight className="w-4 h-4" />
@@ -135,62 +121,6 @@ export const Services: React.FC<ServicesProps> = ({ onOpenContact }) => {
             );
           })}
         </div>
-
-        {/* Selected Service In-Depth View */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeService.id}
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -15 }}
-            transition={{ duration: 0.3 }}
-            className="pt-8 border-t border-zinc-800 relative"
-          >
-            <div className="pb-6 border-b border-zinc-800/80">
-              <div>
-                <h3 className="text-2xl font-bold text-white">{activeService.title}</h3>
-                <p className="text-xs text-cyan-300 mt-1 font-mono italic">{activeService.subtitle}</p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6">
-              
-              {/* Features */}
-              <div className="space-y-3">
-                <h4 className="text-xs font-mono font-bold text-cyan-400 uppercase tracking-wider flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4" /> Escopo do Serviço:
-                </h4>
-                <div className="space-y-2">
-                  {activeService.features.map((item, idx) => (
-                    <div key={idx} className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800/80 flex items-start gap-3 text-xs text-zinc-200">
-                      <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Deliverables */}
-              <div className="space-y-3">
-                <h4 className="text-xs font-mono font-bold text-purple-400 uppercase tracking-wider flex items-center gap-1.5">
-                  <PackageCheck className="w-4 h-4" /> Entregáveis em Mãos:
-                </h4>
-                <div className="space-y-2">
-                  {activeService.deliverables.map((item, idx) => (
-                    <div key={idx} className="p-3 rounded-xl bg-zinc-900/60 border border-zinc-800/80 flex items-start gap-3 text-xs text-zinc-300">
-                      <span className="w-5 h-5 rounded-full bg-purple-950 border border-purple-800 text-purple-300 flex items-center justify-center text-[10px] font-mono font-bold shrink-0">
-                        0{idx + 1}
-                      </span>
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-            </div>
-
-          </motion.div>
-        </AnimatePresence>
 
       </motion.div>
     </section>
