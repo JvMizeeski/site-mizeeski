@@ -118,20 +118,20 @@ export const BehavioralApproach: React.FC<BehavioralApproachProps> = ({ onOpenCo
                   
                   {/* Top Bar: Kicker + Icon */}
                   <div className="flex items-center justify-between pb-3 border-b border-zinc-800">
-                    <span className="text-xs font-mono text-zinc-400 group-hover:text-zinc-200 transition-colors">
+                    <span className="text-base font-mono text-zinc-400 group-hover:text-zinc-200 transition-colors">
                       {card.kicker}
                     </span>
-                    <div className={`w-8 h-8 rounded-lg ${card.bgColor} border border-zinc-800 flex items-center justify-center ${card.color}`}>
-                      <IconComp className="w-4 h-4" />
+                    <div className={`w-10 h-10 rounded-lg ${card.bgColor} border border-zinc-800 flex items-center justify-center ${card.color}`}>
+                      <IconComp className="w-5 h-5" />
                     </div>
                   </div>
 
                   {/* Short Title & Single Phrase */}
                   <div className="space-y-2 pt-1">
-                    <h3 className="text-base font-bold text-white group-hover:text-cyan-300 transition-colors leading-snug">
+                    <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors leading-snug">
                       {card.title}
                     </h3>
-                    <p className="text-xs text-zinc-300 leading-relaxed font-normal">
+                    <p className="text-base text-zinc-300 leading-relaxed font-normal">
                       {card.phrase}
                     </p>
                   </div>
