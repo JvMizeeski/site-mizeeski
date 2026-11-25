@@ -1,58 +1,301 @@
 <!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UX/UI Design & Neurociência Aplicada • João Mizeeski</title>
-    <meta name="description" content="Sou UX/UI Designer especializado em Behavioral Design: uso neurociência comportamental para desenhar produtos digitais que reduzem erro, aumentam confiança e convertem mais." />
-    <link rel="canonical" href="https://mizeeski.com/" />
-    <meta name="theme-color" content="#4f46e5" />
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>João Vitor Mizeeski, Product Designer</title>
+<meta name="description" content="Product designer for complex software: healthcare, B2B SaaS and checkout. Based in Brazil.">
+<meta property="og:title" content="João Vitor Mizeeski, Product Designer">
+<meta property="og:description" content="Product designer for complex software: healthcare, B2B SaaS and checkout.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mizeeski.com/">
+<meta name="theme-color" content="#F4EFE6">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-tone="light">
+<a class="skip" href="#work"><span lang="en">Skip to work</span><span lang="pt">Pular para os trabalhos</span></a>
 
-    <!-- Favicons -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
-    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+<div class="ambient" aria-hidden="true">
+  <div class="blob a"></div><div class="blob b"></div><div class="blob c"></div>
+  <svg class="inkline"></svg>
+  <div class="grain"></div>
+</div>
 
-    <!-- Open Graph / Facebook, WhatsApp, LinkedIn -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://mizeeski.com/" />
-    <meta property="og:title" content="João Mizeeski | Product Designer & UX/UI" />
-    <meta property="og:description" content="Sou especialista em UX/UI, design de produtos e análise de comportamento. Busco conectar e cruzar profundamente as fronteiras da tecnologia, do comportamento e do design." />
-    <meta property="og:image" content="https://mizeeski.com/assets/img/hero.png" />
-    <meta property="og:locale" content="pt_BR" />
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">João Mizeeski</a>
+    <nav aria-label="Main">
+      <a class="nl" href="#work"><span lang="en">Work</span><span lang="pt">Trabalhos</span></a>
+      <a class="nl" href="#experience"><span lang="en">Experience</span><span lang="pt">Experiência</span></a>
+      <a class="nl" href="#about"><span lang="en">About</span><span lang="pt">Sobre</span></a>
+      <a href="#contact"><span lang="en">Contact</span><span lang="pt">Contato</span></a>
+      <div class="lang" role="group" aria-label="Language" data-on="en">
+        <span class="pill" aria-hidden="true"></span>
+        <button type="button" data-set="en" aria-pressed="true">EN</button>
+        <button type="button" data-set="pt" aria-pressed="false">PT</button>
+      </div>
+    </nav>
+  </div>
+</header>
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="João Mizeeski | Product Designer & UX/UI" />
-    <meta name="twitter:description" content="Sou especialista em UX/UI, design de produtos e análise de comportamento. Busco conectar e cruzar profundamente as fronteiras da tecnologia, do comportamento e do design." />
-    <meta name="twitter:image" content="https://mizeeski.com/assets/img/hero.png" />
+<main>
+  <section id="top" class="hero-sec" data-bg="#F4EFE6" data-blobs="#F2D64B,#E7B49F,#BFD3C4">
+    <div class="wrap hero">
+      <h1 lang="en">I design products that are easy to use.</h1>
+      <h1 lang="pt">Eu desenho produtos fáceis de usar.</h1>
+      <p class="lead" lang="en" data-reveal style="--d:.7s">Product designer for complex products: healthcare, B2B SaaS and checkout. Eight years taking work from discovery to handoff, with enough front-end to meet engineers halfway.</p>
+      <p class="lead" lang="pt" data-reveal style="--d:.7s">Product designer para produtos complexos: saúde, SaaS B2B e checkout. Oito anos levando projetos da descoberta ao handoff, com front-end suficiente para trabalhar lado a lado com engenharia.</p>
+      <div class="ctas" data-reveal style="--d:1.05s">
+        <a class="btn solid" href="mailto:joaovitor.mizeeski@gmail.com"><span lang="en">Email me</span><span lang="pt">Me mande um e-mail</span></a>
+        <a class="btn" href="#work"><span lang="en">See selected work</span><span lang="pt">Ver trabalhos</span></a>
+      </div>
+      <div class="scrollcue" data-reveal style="--d:1.3s"><i></i><span lang="en">Scroll</span><span lang="pt">Role</span></div>
+    </div>
+  </section>
 
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "João Vitor Mizeeski",
-      "url": "https://mizeeski.com/",
-      "jobTitle": "UX/UI Designer",
-      "description": "Especialista em UX/UI, design de produtos e Behavioral Design (engenharia comportamental aplicada a produtos digitais).",
-      "image": "https://mizeeski.com/assets/img/hero.png",
-      "address": {
-        "@type": "PostalAddress",
-        "addressRegion": "Santa Catarina",
-        "addressCountry": "BR"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/in/joao-mizeeski",
-        "https://www.behance.net/joovimizeesk"
-      ]
-    }
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <section id="work" data-bg="#EFE6D4" data-blobs="#F2D64B,#E9C3A8,#D9CBB0">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div><h2 lang="en">Selected work</h2><h2 lang="pt">Trabalhos selecionados</h2></div>
+        <div><p class="sub" lang="en">Three projects, each told the way I work: the problem, the decision, and what changed.</p>
+        <p class="sub" lang="pt">Três projetos, contados do jeito que eu trabalho: o problema, a decisão e o que mudou.</p></div>
+      </div>
+      <article class="case">
+        <div class="case-text" data-reveal>
+          <div class="meta"><span class="chip" lang="en">Healthcare SaaS</span><span class="chip" lang="pt">SaaS de saúde</span><span class="chip">2026</span><span class="chip">UX/UI Designer</span></div>
+          <h3 lang="en">Connecting scheduling, inventory and billing in a clinic platform</h3>
+          <h3 lang="pt">Ligando agenda, estoque e financeiro numa plataforma de clínicas</h3>
+          <ul class="steps">
+            <li class="p"><b lang="en">Problem</b><b lang="pt">Problema</b>
+              <p lang="en">Each module worked alone. Staff typed the same procedure into the schedule, the stock sheet and the invoice, and sessions were cancelled when supplies ran out.</p>
+              <p lang="pt">Cada módulo funcionava sozinho. A equipe digitava o mesmo procedimento na agenda, no estoque e na fatura, e sessões eram canceladas quando faltava insumo.</p></li>
+            <li><b lang="en">Decision</b><b lang="pt">Decisão</b>
+              <p lang="en">I turned the procedure into a template that carries its supplies, prices and commissions. Booking it reserves stock and opens a draft invoice, and the schedule shows stock and payment status at a glance.</p>
+              <p lang="pt">Transformei o procedimento num modelo que carrega insumos, preços e comissões. Ao agendar, o estoque é reservado e uma fatura em rascunho é aberta, e a agenda mostra o status de estoque e pagamento de relance.</p></li>
+            <li class="o"><b lang="en">Outcome</b><b lang="pt">Resultado</b>
+              <p lang="en">One booking replaces three manual entries, and missing supplies show up before the patient arrives, not after.</p>
+              <p lang="pt">Um agendamento substitui três lançamentos manuais, e a falta de insumo aparece antes de o paciente chegar, não depois.</p></li>
+          </ul>
+        </div>
+        <figure class="sheet" style="--tilt:-1.4deg" aria-label="Sketch: one booking feeding stock and billing">
+          <svg viewBox="0 0 440 300" role="img">
+            <rect class="sk-soft" x="20" y="28" width="190" height="230" rx="6"/>
+            <text class="lbl-ink" x="36" y="56">Tue 14</text>
+            <path class="sk" d="M36 76 H194 M36 120 H194 M36 164 H194 M36 208 H194" stroke-opacity=".35"/>
+            <rect class="hl" x="34" y="126" width="164" height="32" rx="4"/>
+            <text class="lbl-ink" x="44" y="147">10:00 Procedure</text>
+            <rect class="sk-soft" x="262" y="40" width="156" height="78" rx="6"/>
+            <text class="lbl-ink" x="278" y="68" lang="en">Stock</text><text class="lbl-ink" x="278" y="68" lang="pt">Estoque</text>
+            <text class="lbl" x="278" y="96" lang="en">3 items reserved</text><text class="lbl" x="278" y="96" lang="pt">3 itens reservados</text>
+            <rect class="sk-soft" x="262" y="170" width="156" height="78" rx="6"/>
+            <text class="lbl-ink" x="278" y="198" lang="en">Billing</text><text class="lbl-ink" x="278" y="198" lang="pt">Financeiro</text>
+            <text class="lbl" x="278" y="226" lang="en">Draft invoice</text><text class="lbl" x="278" y="226" lang="pt">Fatura em rascunho</text>
+            <path class="sk" d="M202 138 C230 134 236 90 258 82 M250 76 l9 6 -9 7"/>
+            <path class="sk" d="M202 146 C232 152 236 196 258 206 M248 212 l10 -5 -6 -9"/>
+            <path class="an" d="M27 120 C60 108 180 108 206 124 C214 146 200 166 150 168 C90 170 26 164 24 146 C22 134 34 124 52 120"/>
+            <text class="note" x="44" y="286" lang="en">one action, three updates</text>
+            <text class="note" x="44" y="286" lang="pt">uma ação, três atualizações</text>
+          </svg>
+        </figure>
+      </article>
+      <article class="case">
+        <div class="case-text" data-reveal>
+          <div class="meta"><span class="chip" lang="en">Checkout SaaS, Germany</span><span class="chip" lang="pt">SaaS de checkout, Alemanha</span><span class="chip">2025–2026</span><span class="chip remote" lang="en">Remote</span><span class="chip remote" lang="pt">Remoto</span></div>
+          <h3 lang="en">Making upsell logic visible with a visual funnel editor</h3>
+          <h3 lang="pt">Tornando visível a lógica de upsell com um editor de funil</h3>
+          <ul class="steps">
+            <li class="p"><b lang="en">Problem</b><b lang="pt">Problema</b>
+              <p lang="en">Setting up “if they buy X, offer Y; if they decline, offer Z” through forms was error-prone, and the platform had no page builder for the offers.</p>
+              <p lang="pt">Configurar “se comprou X, oferte Y; se recusou, oferte Z” por formulários gerava erros, e a plataforma não tinha construtor de páginas para as ofertas.</p></li>
+            <li><b lang="en">Decision</b><b lang="pt">Decisão</b>
+              <p lang="en">After benchmarking the main players, I designed a canvas where offers are nodes and decisions are colored paths. Each node doubles as a small dashboard, and settings open in a side drawer without hiding the map.</p>
+              <p lang="pt">Depois de analisar os principais concorrentes, desenhei um canvas em que ofertas são nós e decisões são caminhos coloridos. Cada nó funciona como um mini painel, e as configurações abrem numa gaveta lateral sem esconder o mapa.</p></li>
+            <li class="o"><b lang="en">Outcome</b><b lang="pt">Resultado</b>
+              <p lang="en">Sellers can see and check their branching logic, and external sales pages plug in without a page builder, which kept the first release small enough to ship sooner.</p>
+              <p lang="pt">O vendedor enxerga e confere a lógica do funil, e páginas de venda externas entram sem construtor de páginas, o que manteve a primeira versão enxuta o bastante para sair mais cedo.</p></li>
+          </ul>
+        </div>
+        <figure class="sheet" style="--tilt:1.2deg" aria-label="Sketch: funnel nodes with accept and decline paths">
+          <svg viewBox="0 0 440 300" role="img">
+            <rect class="sk-soft" x="24" y="118" width="110" height="58" rx="8"/>
+            <text class="lbl-ink" x="42" y="152">Checkout</text>
+            <rect class="sk-soft" x="182" y="40" width="110" height="58" rx="8"/>
+            <text class="lbl-ink" x="204" y="74">Upsell</text>
+            <rect class="sk-soft" x="182" y="196" width="110" height="58" rx="8"/>
+            <text class="lbl-ink" x="196" y="230">Downsell</text>
+            <rect class="sk-soft" x="330" y="118" width="94" height="58" rx="8"/>
+            <text class="lbl-ink" x="344" y="152" lang="en">Thank you</text><text class="lbl-ink" x="350" y="152" lang="pt">Obrigado</text>
+            <path class="sk ok" d="M134 140 C156 120 160 76 178 70"/>
+            <path class="sk no" d="M134 156 C156 176 160 220 178 226"/>
+            <path class="sk ok" d="M292 70 C316 76 318 120 328 136"/>
+            <path class="sk no" d="M237 98 C238 130 238 160 237 192" stroke-dasharray="5 6"/>
+            <path class="sk ok" d="M292 226 C316 220 318 176 328 160"/>
+            <text class="lbl" x="140" y="96" lang="en">bought</text><text class="lbl" x="140" y="96" lang="pt">comprou</text>
+            <text class="lbl" x="244" y="150" lang="en">declined</text><text class="lbl" x="244" y="150" lang="pt">recusou</text>
+            <path class="an" d="M174 34 C220 22 300 26 302 66 C304 104 250 110 200 106 C170 104 168 80 172 56"/>
+            <text class="note" x="24" y="34" lang="en">drawn, not typed</text>
+            <text class="note" x="24" y="34" lang="pt">desenhado, não digitado</text>
+          </svg>
+        </figure>
+      </article>
+      <article class="case">
+        <div class="case-text" data-reveal>
+          <div class="meta"><span class="chip" lang="en">EdTech, DACH market</span><span class="chip" lang="pt">EdTech, mercado DACH</span><span class="chip">2025–2026</span><span class="chip remote" lang="en">Remote</span><span class="chip remote" lang="pt">Remoto</span></div>
+          <h3 lang="en">Partner mode: selling courses inside other platforms</h3>
+          <h3 lang="pt">Partner mode: vendendo cursos dentro de outras plataformas</h3>
+          <ul class="steps">
+            <li class="p"><b lang="en">Problem</b><b lang="pt">Problema</b>
+              <p lang="en">Partners needed to embed courses through an API without technical friction, and pricing had to beat an established competitor.</p>
+              <p lang="pt">Parceiros precisavam embutir cursos via API sem barreira técnica, e o preço tinha de vencer um concorrente já estabelecido.</p></li>
+            <li><b lang="en">Decision</b><b lang="pt">Decisão</b>
+              <p lang="en">I designed a self-serve setup: a four-step onboarding with no side navigation (account, product, plan, integration), four plan tiers, and an embeddable player with single sign-on for students.</p>
+              <p lang="pt">Desenhei uma configuração self-service: onboarding em quatro etapas sem navegação lateral (conta, produto, plano, integração), quatro planos e um player embutível com login único para os alunos.</p></li>
+            <li class="o"><b lang="en">Outcome</b><b lang="pt">Resultado</b>
+              <p lang="en">The entry plan offers five times the students of the main competitor at the same price, and students learn without a second login.</p>
+              <p lang="pt">O plano de entrada oferece cinco vezes mais alunos que o principal concorrente pelo mesmo preço, e o aluno estuda sem um segundo login.</p></li>
+          </ul>
+        </div>
+        <figure class="sheet" style="--tilt:-0.8deg" aria-label="Sketch: four-step onboarding">
+          <svg viewBox="0 0 440 300" role="img">
+            <path class="sk" d="M46 92 H394" stroke-opacity=".45"/>
+            <circle class="sk-soft" cx="56" cy="92" r="16"/><text class="lbl-ink" x="52" y="97">1</text>
+            <circle class="sk-soft" cx="168" cy="92" r="16"/><text class="lbl-ink" x="163" y="97">2</text>
+            <circle class="sk-soft" cx="280" cy="92" r="16"/><text class="lbl-ink" x="275" y="97">3</text>
+            <circle class="sk-soft" cx="384" cy="92" r="16" style="fill:var(--marker)"/><text class="lbl-ink" x="379" y="97">4</text>
+            <text class="lbl" x="30" y="132" lang="en">Account</text><text class="lbl" x="30" y="132" lang="pt">Conta</text>
+            <text class="lbl" x="144" y="132" lang="en">Product</text><text class="lbl" x="144" y="132" lang="pt">Produto</text>
+            <text class="lbl" x="264" y="132" lang="en">Plan</text><text class="lbl" x="262" y="132" lang="pt">Plano</text>
+            <text class="lbl" x="346" y="132" lang="en">Integration</text><text class="lbl" x="346" y="132" lang="pt">Integração</text>
+            <rect class="sk-soft" x="40" y="160" width="360" height="104" rx="6"/>
+            <path class="sk" d="M40 184 H400" stroke-opacity=".4"/>
+            <circle class="sk" cx="56" cy="172" r="3"/><circle class="sk" cx="68" cy="172" r="3"/>
+            <rect class="sk" x="60" y="198" width="150" height="50" rx="4"/>
+            <path class="sk" d="M128 213 l18 10 -18 10 z"/>
+            <path class="sk" d="M232 206 H372 M232 222 H340 M232 238 H356" stroke-opacity=".45"/>
+            <path class="an" d="M14 40 C14 28 30 24 46 26 M40 22 l8 5 -8 6"/>
+            <text class="note" x="58" y="40" lang="en">no side menu: one path to “live”</text>
+            <text class="note" x="58" y="40" lang="pt">sem menu lateral: um caminho até o “no ar”</text>
+          </svg>
+        </figure>
+      </article>
+
+      <h3 class="more-title" data-reveal><span lang="en">More work</span><span lang="pt">Outros trabalhos</span></h3>
+      <ul class="more" data-reveal>
+        <li><div><strong lang="en">Unified hub with single sign-on</strong><strong lang="pt">Hub unificado com login único</strong>
+          <div class="d" lang="en">One login and one navigation for a group of financial apps.</div><div class="d" lang="pt">Um login e uma navegação para um grupo de aplicações financeiras.</div></div><span class="k">Grupo Nexxees, 2024–2025</span></li>
+        <li><div><strong lang="en">Campaign landing pages connected to Salesforce</strong><strong lang="pt">Landing pages de campanha ligadas ao Salesforce</strong>
+          <div class="d" lang="en">A repeatable setup that sends leads straight into the CRM.</div><div class="d" lang="pt">Um processo replicável que manda os leads direto para o CRM.</div></div><span class="k">Grupo Nexxees, 2024–2025</span></li>
+        <li><div><strong lang="en">Real estate websites</strong><strong lang="pt">Sites para o mercado imobiliário</strong>
+          <div class="d" lang="en">Sites and property catalogs for agencies and brokers, like Bloco 2 Imóveis, with separate journeys for owners and tenants.</div><div class="d" lang="pt">Sites e catálogos de imóveis para imobiliárias e corretores, como a Bloco 2 Imóveis, com jornadas separadas para proprietários e inquilinos.</div></div><span class="k" lang="en">Freelance, 2025–2026</span><span class="k" lang="pt">Freelance, 2025–2026</span></li>
+        <li><div><strong>Rotina Track</strong>
+          <div class="d" lang="en">A habit tracker I designed and built end to end, with streaks and progress analytics.</div><div class="d" lang="pt">Um app de hábitos que desenhei e desenvolvi de ponta a ponta, com sequências e análise de progresso.</div></div><span class="k" lang="en">Personal product</span><span class="k" lang="pt">Produto pessoal</span></li>
+        <li><div><strong lang="en">Brands and websites for local businesses</strong><strong lang="pt">Marcas e sites para negócios locais</strong>
+          <div class="d" lang="en">A premium fitness coaching brand and a security company serving three kinds of clients.</div><div class="d" lang="pt">Uma marca de consultoria fitness premium e uma empresa de segurança que atende três perfis de cliente.</div></div><span class="k">Freelance, 2025</span></li>
+        <li><div><strong>One Touch Paint</strong>
+          <div class="d" lang="en">Website for a painting company in Massachusetts, with a before-and-after comparison.</div><div class="d" lang="pt">Site para uma empresa de pintura em Massachusetts, com comparador de antes e depois.</div></div><span class="k" lang="en">US client, 2025</span><span class="k" lang="pt">Cliente nos EUA, 2025</span></li>
+        <li><div><strong>Haky Club</strong>
+          <div class="d" lang="en">Brand and online store for the sportswear label I co-founded.</div><div class="d" lang="pt">Marca e loja online da marca de roupas esportivas que cofundei.</div></div><span class="k" lang="en">Co-founder</span><span class="k" lang="pt">Cofundador</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="experience" data-bg="#E4EBE4" data-blobs="#BFD3C4,#F2D64B,#C9D8E2">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div><h2 lang="en">Experience</h2><h2 lang="pt">Experiência</h2></div>
+        <div><p class="sub" lang="en">Brazilian and European products, in office and remote.</p>
+        <p class="sub" lang="pt">Produtos brasileiros e europeus, presencial e remoto.</p></div>
+      </div>
+      <ol class="xp">
+        <li><time lang="en">Mar 2026 – now</time><time lang="pt">mar 2026 – hoje</time>
+          <div><h4>UX/UI Designer &amp; Researcher</h4><div class="where">Essentia Group, Brazil</div>
+          <p lang="en">End-to-end design for a healthcare SaaS used by clinics: scheduling, prescriptions, records and billing. I also maintain the component library.</p>
+          <p lang="pt">Design de ponta a ponta para um SaaS de saúde usado por clínicas: agenda, prescrições, prontuário e financeiro. Também mantenho a biblioteca de componentes.</p></div></li>
+        <li><time lang="en">Oct 2025 – Feb 2026</time><time lang="pt">out 2025 – fev 2026</time>
+          <div><h4>Lead Product Designer <span class="chip remote" lang="en">remote</span><span class="chip remote" lang="pt">remoto</span></h4><div class="where">Multidrop GmbH, Cologne, Germany</div>
+          <p lang="en">Led UX/UI for an all-in-one platform for creators in Germany, Austria and Switzerland, from discovery to design system.</p>
+          <p lang="pt">Liderei UX/UI de uma plataforma completa para criadores na Alemanha, Áustria e Suíça, da descoberta ao design system.</p></div></li>
+        <li><time lang="en">Feb 2024 – Oct 2025</time><time lang="pt">fev 2024 – out 2025</time>
+          <div><h4>Senior Product &amp; Web Designer</h4><div class="where">Grupo Nexxees, Brazil</div>
+          <p lang="en">Restructured information architecture across internal products and portals, and used funnel and behavior data to improve conversion with the growth team.</p>
+          <p lang="pt">Reestruturei a arquitetura de informação de produtos internos e portais, e usei dados de funil e comportamento para melhorar a conversão com o time de growth.</p></div></li>
+        <li><time lang="en">2020 – now</time><time lang="pt">2020 – hoje</time>
+          <div><h4 lang="en">Independent product designer</h4><h4 lang="pt">Product designer independente</h4><div class="where">Mizeeski Design, remote</div>
+          <p lang="en">UX/UI, brand and responsive websites for B2B companies, service platforms and startups, including interactive calculators and onboarding flows connected to CRMs.</p>
+          <p lang="pt">UX/UI, marca e sites responsivos para empresas B2B, plataformas de serviço e startups, incluindo calculadoras interativas e fluxos de onboarding integrados a CRM.</p></div></li>
+        <li><time lang="en">Mar 2020 – Jun 2024</time><time lang="pt">mar 2020 – jun 2024</time>
+          <div><h4>UX/UI Designer &amp; front-end</h4><div class="where">Plataforma 3/4, Brazil</div>
+          <p lang="en">Turned client requirements into web products, from research and wireframes to WordPress and Webflow builds tuned for performance.</p>
+          <p lang="pt">Transformei requisitos de clientes em produtos web, da pesquisa e wireframes até sites em WordPress e Webflow com foco em performance.</p></div></li>
+        <li><time>2016 – 2024</time>
+          <div><h4 lang="en">Graphic and web design</h4><h4 lang="pt">Design gráfico e web</h4><div class="where" lang="en">Freelance and in-house</div><div class="where" lang="pt">Freelancer e em empresas</div>
+          <p lang="en">Brands, campaigns, e-commerce and websites. Where I learned to ship.</p>
+          <p lang="pt">Marcas, campanhas, e-commerce e sites. Onde aprendi a entregar.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="about" data-bg="#F0E3DC" data-blobs="#E7B49F,#F2D64B,#E8CFC4">
+    <div class="wrap about">
+      <div data-reveal>
+        <img class="photo" src="assets/img/profile.webp" alt="João Vitor Mizeeski" width="132" height="132">
+        <h2 lang="en" style="margin-bottom:26px">About</h2><h2 lang="pt" style="margin-bottom:26px">Sobre</h2>
+        <p lang="en">I started in graphic design, moved into web and product, and now design for healthcare, where a confusing screen costs time with patients. A business degree keeps me close to what the product needs to earn.</p>
+        <p lang="pt">Comecei no design gráfico, passei para web e produto, e hoje desenho para a área da saúde, onde uma tela confusa custa tempo com o paciente. A formação em Administração me mantém perto do que o produto precisa gerar de resultado.</p>
+        <p lang="en">I'm also studying neuroscience and human behavior, and I explain brain science to a general audience on Instagram. It shapes how I design: fewer choices at the wrong moment, clear defaults, and feedback people can trust.</p>
+        <p lang="pt">Também estudo neurociência e comportamento humano, e explico ciência do cérebro para o público geral no Instagram. Isso molda meu jeito de desenhar: menos escolhas na hora errada, padrões claros e feedback em que dá para confiar.</p>
+      </div>
+      <div class="facts" data-reveal style="--d:.15s">
+        <div><h4 lang="en">How I work</h4><h4 lang="pt">Como eu trabalho</h4>
+          <p lang="en">Discovery and interviews, usability tests, journey maps and heuristic reviews. Figma with components, variants and tokens. HTML, CSS, JavaScript and some React, so handoff is a conversation, not a file. Used to working async across time zones.</p>
+          <p lang="pt">Descoberta e entrevistas, testes de usabilidade, mapas de jornada e análises heurísticas. Figma com componentes, variantes e tokens. HTML, CSS, JavaScript e um pouco de React, para que o handoff seja conversa e não só arquivo. Acostumado a trabalhar de forma assíncrona entre fusos.</p></div>
+        <div><h4 lang="en">Languages</h4><h4 lang="pt">Idiomas</h4>
+          <p lang="en">Portuguese (native), English (professional), Japanese (basic).</p>
+          <p lang="pt">Português (nativo), inglês (profissional), japonês (básico).</p></div>
+        <div><h4 lang="en">Education</h4><h4 lang="pt">Formação</h4>
+          <ul lang="en">
+            <li>Neuroscience and Human Behavior, postgraduate (Estácio, in progress)</li>
+            <li>UX Design and Beyond, postgraduate (PUCRS, 2025)</li>
+            <li>Business Administration, bachelor's (Unigranrio, 2022)</li>
+            <li>Perception and Memory in HCI and UX (Interaction Design Foundation, 2026)</li>
+          </ul>
+          <ul lang="pt">
+            <li>Pós em Neurociência e Comportamento Humano (Estácio, em curso)</li>
+            <li>Pós em UX Design and Beyond (PUCRS, 2025)</li>
+            <li>Bacharelado em Administração (Unigranrio, 2022)</li>
+            <li>Perception and Memory in HCI and UX (Interaction Design Foundation, 2026)</li>
+          </ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" data-bg="#1C1B19" data-tone="dark" data-blobs="#6A5620,#6B3A2C,#2F4A3A">
+    <div class="wrap">
+      <h2 lang="en" data-reveal>Let’s talk about your product.</h2>
+      <h2 lang="pt" data-reveal>Vamos conversar sobre o seu produto?</h2>
+      <p class="sub" lang="en" data-reveal style="--d:.1s">Email is the fastest way to reach me. I’ve worked with teams in Brazil and Europe, in office and remote.</p>
+      <p class="sub" lang="pt" data-reveal style="--d:.1s">E-mail é o jeito mais rápido de falar comigo. Já trabalhei com times no Brasil e na Europa, presencial e remoto.</p>
+      <div data-reveal style="--d:.2s"><a class="email" href="mailto:joaovitor.mizeeski@gmail.com">joaovitor.mizeeski@gmail.com</a></div>
+      <div class="links" data-reveal style="--d:.3s">
+        <a href="https://www.linkedin.com/in/jvmizeeski" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/JvMizeeski" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.instagram.com/v0njao" target="_blank" rel="noopener">Instagram</a>
+        <a href="assets/cv/cv-joao-mizeeski-en.pdf" download lang="en">Download CV (PDF)</a>
+        <a href="assets/cv/cv-joao-mizeeski-pt.pdf" download lang="pt">Baixar currículo (PDF)</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">© 2026 João Vitor Mizeeski</div></footer>
+<a class="wa" href="https://wa.me/5548984591763" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5c-4.7 0-8.5 3.5-8.5 7.9 0 2.3 1 4.3 2.7 5.8L5.5 20.5l3.6-1.6c.9.3 1.9.4 2.9.4 4.7 0 8.5-3.5 8.5-7.9S16.7 3.5 12 3.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="8.6" cy="11.4" r="1.1" fill="currentColor"/><circle cx="12" cy="11.4" r="1.1" fill="currentColor"/><circle cx="15.4" cy="11.4" r="1.1" fill="currentColor"/></svg>
+  <span class="wa-label">WhatsApp</span>
+</a>
+<script src="assets/js/main.js" defer></script>
+</body>
 </html>
